@@ -1,8 +1,8 @@
 # Lightwallet API
-This document describes a reference standard specification for the Monero
-lightwallet server/client API. It’s implemented by OpenMonero, MyMonero, and
-the official Monero project, and is maintained with the purpose of organizing
-and recording the consensus of Monero lightwallet API projects, and to support
+This document describes a reference standard specification for the ByteRub
+lightwallet server/client API. It’s implemented by OpenByteRub, MyByteRub, and
+the official ByteRub project, and is maintained with the purpose of organizing
+and recording the consensus of ByteRub lightwallet API projects, and to support
 alternate implementations.
 
 Modifications to this specification should only be made with consensus of the
@@ -51,7 +51,7 @@ concept - a public key or hash.
 
 **base58-address**
 
-A standard Monero public address encoded as a string in JSON.
+A standard ByteRub public address encoded as a string in JSON.
 
 **output** object
 
@@ -137,7 +137,7 @@ Information needed to spend an output.
 
 **timestamp**
 
-A string in JSON. The string format is "YYYY-HH-MM-SS.0-00:00". Monero
+A string in JSON. The string format is "YYYY-HH-MM-SS.0-00:00". ByteRub
 blockchain timestamps do not have sub-seconds.
 
 **transaction** object
@@ -234,7 +234,7 @@ list of candidate spends is returned.
 | scanned_height       | uint64           | Current tx scan progress  |
 | scanned_block_height | uint64           | Current scan progress     |
 | start_height         | uint64           | Start height of response  |
-| transaction_height   | uint64           | Total txes sent in Monero |
+| transaction_height   | uint64           | Total txes sent in ByteRub |
 | blockchain_height    | uint64           | Current blockchain height |
 | spent_outputs        | array of spend's | Possible spend info       |
 | rates *              | rates            | Current exchange rates    |
@@ -271,7 +271,7 @@ spends is returned.
 Selects random outputs to use in a ring signature of a new transaction. If the
 `amount` is `0` then the `monerod` RPC `get_output_distribution` should be used
 to locally select outputs using a gamma distribution as described in "An
-Empirical Analysis of Traceability in the Monero Blockchain". If the `amount`
+Empirical Analysis of Traceability in the ByteRub Blockchain". If the `amount`
 is not `0`, then the `monerod` RPC `get_output_histogram` should be used to
 locally select outputs using a triangular distribution
 (`uint64_t dummy_out = histogram.total * sqrt(float64(random_uint53) / float64(2^53))`).

@@ -1,5 +1,5 @@
 [center]
-[size=14pt][b][size=20pt]›››[/size] [url=http://downloads.getmonero.org/win64]Windows 64-bit[/url] • [url=http://downloads.getmonero.org/mac]OS X[/url] • [url=http://downloads.getmonero.org/linux]Linux[/url] • [url=http://downloads.getmonero.org/freebsd]FreeBSD[/url] •  [url=https://github.com/monero-project/bitmonero]Source code[/url] [size=20pt]‹‹‹[/size][/b][/size]
+[size=14pt][b][size=20pt]›››[/size] [url=http://downloads.getmonero.org/win64]Windows 64-bit[/url] • [url=http://downloads.getmonero.org/mac]OS X[/url] • [url=http://downloads.getmonero.org/linux]Linux[/url] • [url=http://downloads.getmonero.org/freebsd]FreeBSD[/url] •  [url=https://github.com/byterubpay/bitmonero]Source code[/url] [size=20pt]‹‹‹[/size][/b][/size]
 
 [center][size=12pt]We are [url=https://plus.google.com/+DavidLatapie/posts/9PxC9Xb5uzg]moving away from Bitcointalk[/url]. For latest information, check out [url=https://forum.getmonero.org/1/news-announcements-and-editorials]News, announcements and editorials[/url] on the [url=https://forum.getmonero.org/]official forum[/url][/size][/center]
 
@@ -7,7 +7,7 @@
 [url=http://www.getmonero.org/][b]Website: getmonero.org[/b][/url]
 [url=https://forum.getmonero.org]Official Forum: forum.getmonero.org[/url]
 
-[url=https://bitcointalk.org/index.php?topic=597878]Monero Economy[/url]  •  [url=https://bitcointalk.org/index.php?topic=652305]Monero Support[/url]* •  [url=https://bitcointalk.org/index.php?topic=653467]Monero Mining[/url]  •  [url=https://bitcointalk.org/index.php?topic=753252]Monero Speculation[/url]*  •  [url=https://bitcointalk.org/index.php?topic=696620]Monero Dev[/url]*  •  [url=https://bitcointalk.org/index.php?topic=716331]Monero large OTC[/url]
+[url=https://bitcointalk.org/index.php?topic=597878]ByteRub Economy[/url]  •  [url=https://bitcointalk.org/index.php?topic=652305]ByteRub Support[/url]* •  [url=https://bitcointalk.org/index.php?topic=653467]ByteRub Mining[/url]  •  [url=https://bitcointalk.org/index.php?topic=753252]ByteRub Speculation[/url]*  •  [url=https://bitcointalk.org/index.php?topic=696620]ByteRub Dev[/url]*  •  [url=https://bitcointalk.org/index.php?topic=716331]ByteRub large OTC[/url]
 [i]* self-moderated[/i]
 
 #monero  •  #monero-dev  •  #monero-otc  •  #monero-markets  •  #monero-pools  •  QQ Group: 272729907
@@ -16,14 +16,14 @@
 [url=https://twitter.com/monerocurrency][img]http://i.imgur.com/YEDcjbV.png[/img][/url] [url=http://www.reddit.com/r/monero][img]http://i.imgur.com/xVEG9un.png[/img][/url] [url=https://www.facebook.com/monerocurrency][img]http://i.imgur.com/6Y4lJbg.png[/img][/url] [url=https://plus.google.com/101861896996947433029/posts][img]http://i.imgur.com/VY867Q0.png[/img][/url]
 [/center]
 
-Monero (XMR) is a privacy-focused cryptocurrency that is not based on Bitcoin's code.
+ByteRub (XMR) is a privacy-focused cryptocurrency that is not based on Bitcoin's code.
 
-Monero aims to be a fungible and untraceable digital medium of exchange. It intrinsically has a higher degree of privacy than Bitcoin or any of its various forks. It was launched on April 18, 2014 (preannounced and no premine/ICO/etc.).
+ByteRub aims to be a fungible and untraceable digital medium of exchange. It intrinsically has a higher degree of privacy than Bitcoin or any of its various forks. It was launched on April 18, 2014 (preannounced and no premine/ICO/etc.).
 
 The official core team members are (in no particular order) - Riccardo "fluffypony" Spagni, luigi1111, NoodleDoodle, smooth, tacotime, Franciso "ArticMine" Cabañas, othe
 
 [size=12pt][b]Announcements[/b][/size]
-Please visit [url=https://forum.getmonero.org/1/news-announcements-and-editorials]News, announcements and editorials[/url] on the Monero Forum for the latest news.
+Please visit [url=https://forum.getmonero.org/1/news-announcements-and-editorials]News, announcements and editorials[/url] on the ByteRub Forum for the latest news.
 Visit our [url=http://monero.stackexchange.com/]StackExchange[/url] site, where you can ask, answer, and view technical questions!
 
 [size=12pt][b]Features[/b][/size]
@@ -37,14 +37,14 @@ Visit our [url=http://monero.stackexchange.com/]StackExchange[/url] site, where 
 
 [size=12pt][b]Academic and Theory[/b][/size]
 
-Monero's functionality is backed up by academic research and cryptographically proven schemes. Much of this research is done by the Monero Research Lab. Since Monero was initially based on the CryptoNote protocol, the CryptoNote whitepaper is also an invaluable reference for validating Monero's unlinkability and untraceability claims.
+ByteRub's functionality is backed up by academic research and cryptographically proven schemes. Much of this research is done by the ByteRub Research Lab. Since ByteRub was initially based on the CryptoNote protocol, the CryptoNote whitepaper is also an invaluable reference for validating ByteRub's unlinkability and untraceability claims.
 
 [list]
 [li][url=https://cryptonote.org/whitepaper.pdf]The CryptoNote Whitepaper[/url][/li]
 [li][url=http://downloads.getmonero.org/whitepaper_review.pdf]Initial Review of the CryptoNote Whitepaper[/url][/li]
 [li][url=https://lab.getmonero.org/pubs/MRL-0001.pdf]MRL-0001: A Note on Chain Reactions in Traceability in CryptoNote 2.0[/url][/li]
 [li][url=https://lab.getmonero.org/pubs/MRL-0002.pdf]MRL-0002: Counterfeiting via Merkle Tree Exploits within Virtual Currencies Employing the CryptoNote Protocol[/url][/li]
-[li][url=https://lab.getmonero.org/pubs/MRL-0003.pdf]MRL-0003: Monero is Not That Mysterious[/url][/li]
+[li][url=https://lab.getmonero.org/pubs/MRL-0003.pdf]MRL-0003: ByteRub is Not That Mysterious[/url][/li]
 [li][url=https://lab.getmonero.org/pubs/MRL-0004.pdf]MRL-0004: Improving Obfuscation in the CryptoNote Protocol[/url][/li]
 [li][url=https://lab.getmonero.org/pubs/MRL-0005.pdf]MRL-0005: Ring Signature Confidential Transactions[/url][/li]
 [/list]
@@ -60,7 +60,7 @@ Monero's functionality is backed up by academic research and cryptographically p
 [/list]
 
 [size=7pt][1][/size] CPU + GPU mining (about 1:1 performance for now). Memory-bound by design using AES encryption and several SHA-3 candidates.
-[size=7pt][2][/size] Initial number of atomic units is M = 2[sup]64[/sup] - 1. However, once the block reward reaches 0.3 XMR per minute (sometime in 2022) that is treated as the minimum subsidy, which means that Monero's total emission will forever increase by ~157680 XMR annually.
+[size=7pt][2][/size] Initial number of atomic units is M = 2[sup]64[/sup] - 1. However, once the block reward reaches 0.3 XMR per minute (sometime in 2022) that is treated as the minimum subsidy, which means that ByteRub's total emission will forever increase by ~157680 XMR annually.
 [size=7pt][3][/size] Uses a recurrence relation. Block reward = (M - A) * 2[sup]-20[/sup] * 10[sup]-12[/sup], where A = current circulation. Roughly 86% mined in 4 years (see [url=http://i.imgur.com/lDqIdyd.png]graph[/url]).
 
 
@@ -76,7 +76,7 @@ Monero's functionality is backed up by academic research and cryptographically p
 Latest release: 0.10.1.0 [i]Wolfram Warptangent[i]
 
 [list]
-[li][url=https://github.com/monero-project/monero][b]Source code[/b][/url][/li]
+[li][url=https://github.com/byterubpay/monero][b]Source code[/b][/url][/li]
 [li][url=http://downloads.getmonero.org/win64]Windows, 64-bit (downloads.getmonero.org/win64)[/url] - SHA256: 727a53dd154b61fd653f81da27788077fdf519301c81d3c1eb033c1ff2bf97c6[/li]
 [li][url=http://downloads.getmonero.org/win64]Windows, 32-bit (downloads.getmonero.org/win32)[/url] - SHA256: ce77137b33bcaeb59273cb73b86e426e35e6209fb52a7e74fd9432a5a3018041[/li]
 [li][url=http://downloads.getmonero.org/mac]OS X, 64-bit (downloads.getmonero.org/mac64)[/url] - SHA256: 447cebae257864b3706a8622f495bfd9fae780a6b277e1e31ac83bef7bc855c6[/li]
@@ -95,11 +95,11 @@ viewkey: f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501[/code]
 
 [b]BTC:[/b] [code]1KTexdemPdxSBcG55heUuTjDRYqbC5ZL8H[/code]
 
-[url=https://bitcointalk.org/index.php?topic=700400]Monero Community Hall of Fame[/url]
+[url=https://bitcointalk.org/index.php?topic=700400]ByteRub Community Hall of Fame[/url]
 
 [size=12pt][b]Alternative Clients[/b][/size]
 
-Please visit: [url=http://getmonero.org/getting-started/choose]How to choose a Monero client[/url]
+Please visit: [url=http://getmonero.org/getting-started/choose]How to choose a ByteRub client[/url]
 
 [size=12pt][b]Miners[/b][/size]
 [list]
