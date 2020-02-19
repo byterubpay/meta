@@ -72,14 +72,14 @@ Information needed to spend an output.
 | timestamp        | timestamp         | Timestamp of containing block |
 | height           | uint64            | Containing block height       |
 
-> `tx_id` is determined by the monero daemon. It is the offset that a
+> `tx_id` is determined by the byterub daemon. It is the offset that a
 > transaction appears in the blockchain from the genesis block.
 
-> `global_index` is determined by the monero daemon. It is the offset from the
+> `global_index` is determined by the byterub daemon. It is the offset from the
 > first time the amount appeared in the blockchain. After ringct, this is the
 > order of outputs as they appear in the blockchain.
 
-> `tx_hash` and `tx_prefix_hash` are determined by how `monerod` computes the
+> `tx_hash` and `tx_prefix_hash` are determined by how `byterubd` computes the
 > hash.
 
 > `rct` is, for ringct outputs, a 96-byte blob containing the concatenation
@@ -130,7 +130,7 @@ Information needed to spend an output.
 | mixin      | uint32        | Mixin of the spend         |
 
 > `out_index` is a zero-based offset from the original received output. The
-> variable within the monero codebase is the `vout` array, this is the index
+> variable within the byterub codebase is the `vout` array, this is the index
 > within that. It is needed for correct computation of the `key_image`.
 
 > `mixin` does not include the real spend - this is the number of dummy inputs.
@@ -157,12 +157,12 @@ blockchain timestamps do not have sub-seconds.
 | mempool        | boolean          | True if tx is in mempool  |
 | mixin          | uint32           | Mixin of the receive      |
 
-> `id` is determined by the monero daemon. It is the offset that a
+> `id` is determined by the byterub daemon. It is the offset that a
 > transaction appears in the blockchain from the genesis block.
 
 > `timestamp` and `height` are not sent when `mempool` is true.
 
-> `hash` is determined by how the monero core computes the hash.
+> `hash` is determined by how the byterub core computes the hash.
 
 > `spent_outputs` is the list of possible spends in _this_ transaction only.
 
@@ -192,7 +192,7 @@ exceed 2^53 - all numbers are 64-bit floats in JavaScript.
 | public_key   | bytes         | Bytes of output public key         |
 | rct          | bytes         | Bytes containing ringct commitment |
 
-> `global_index` is determined by the monero daemon. It is the offset from the
+> `global_index` is determined by the byterub daemon. It is the offset from the
 > first time the amount appeared in the blockchain. After ringct, this is the
 > order of outputs as they appear in the blockchain.
 
@@ -269,10 +269,10 @@ spends is returned.
 
 #### `get_random_outs`
 Selects random outputs to use in a ring signature of a new transaction. If the
-`amount` is `0` then the `monerod` RPC `get_output_distribution` should be used
+`amount` is `0` then the `byterubd` RPC `get_output_distribution` should be used
 to locally select outputs using a gamma distribution as described in "An
 Empirical Analysis of Traceability in the ByteRub Blockchain". If the `amount`
-is not `0`, then the `monerod` RPC `get_output_histogram` should be used to
+is not `0`, then the `byterubd` RPC `get_output_histogram` should be used to
 locally select outputs using a triangular distribution
 (`uint64_t dummy_out = histogram.total * sqrt(float64(random_uint53) / float64(2^53))`).
 
@@ -381,7 +381,7 @@ Check for the existence of an account or create a new one.
 | start_height *      | uint64  | Account scanning start block       |
 
 #### `submit_raw_tx`
-Submit raw transaction to be relayed to monero network.
+Submit raw transaction to be relayed to byterub network.
 
 **Request** object
 
@@ -389,8 +389,8 @@ Submit raw transaction to be relayed to monero network.
 |------------|----------------|-----------------------------------------------------------|
 | tx         | binary         | Raw transaction bytes, in format used by daemon p2p comms |
 
-> This format is tricky unfortunately, it is custom to the monero daemon. The
-> internal code of `monerod` must be read to determine this format currently.
+> This format is tricky unfortunately, it is custom to the byterub daemon. The
+> internal code of `byterubd` must be read to determine this format currently.
 
 **Response** object
 
@@ -398,5 +398,5 @@ Submit raw transaction to be relayed to monero network.
 |--------|--------|-----------------|
 | status | string | Status of relay |
 
-> `status` is typically the response by the monero daemon attempting to relay
+> `status` is typically the response by the byterub daemon attempting to relay
 > the transaction.
