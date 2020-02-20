@@ -16,7 +16,7 @@
 [url=https://twitter.com/byterubcurrency][img]http://i.imgur.com/YEDcjbV.png[/img][/url] [url=http://www.reddit.com/r/byterub][img]http://i.imgur.com/xVEG9un.png[/img][/url] [url=https://www.facebook.com/byterubcurrency][img]http://i.imgur.com/6Y4lJbg.png[/img][/url] [url=https://plus.google.com/101861896996947433029/posts][img]http://i.imgur.com/VY867Q0.png[/img][/url]
 [/center]
 
-ByteRub (XMR) is a privacy-focused cryptocurrency that is not based on Bitcoin's code.
+ByteRub (BTR) is a privacy-focused cryptocurrency that is not based on Bitcoin's code.
 
 ByteRub aims to be a fungible and untraceable digital medium of exchange. It intrinsically has a higher degree of privacy than Bitcoin or any of its various forks. It was launched on April 18, 2014 (preannounced and no premine/ICO/etc.).
 
@@ -60,7 +60,7 @@ ByteRub's functionality is backed up by academic research and cryptographically 
 [/list]
 
 [size=7pt][1][/size] CPU + GPU mining (about 1:1 performance for now). Memory-bound by design using AES encryption and several SHA-3 candidates.
-[size=7pt][2][/size] Initial number of atomic units is M = 2[sup]64[/sup] - 1. However, once the block reward reaches 0.3 XMR per minute (sometime in 2022) that is treated as the minimum subsidy, which means that ByteRub's total emission will forever increase by ~157680 XMR annually.
+[size=7pt][2][/size] Initial number of atomic units is M = 2[sup]64[/sup] - 1. However, once the block reward reaches 0.3 BTR per minute (sometime in 2022) that is treated as the minimum subsidy, which means that ByteRub's total emission will forever increase by ~157680 BTR annually.
 [size=7pt][3][/size] Uses a recurrence relation. Block reward = (M - A) * 2[sup]-20[/sup] * 10[sup]-12[/sup], where A = current circulation. Roughly 86% mined in 4 years (see [url=http://i.imgur.com/lDqIdyd.png]graph[/url]).
 
 
@@ -88,7 +88,7 @@ Latest release: 0.10.1.0 [i]Wolfram Warptangent[i]
 
 [size=12pt][b]Donations for general development[/b][/size]
 
-[b]XMR:[/b] [code]
+[b]BTR:[/b] [code]
 address (OpenAlias) donate.getbyterub.org
 address (full) 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A
 viewkey: f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501[/code]
@@ -113,7 +113,7 @@ Please visit: [url=http://getbyterub.org/getting-started/choose]How to choose a 
 
 [list]
 [li][url=http://byterubblocks.info/]byterubblocks.info[/url][/li]
-[li][url=http://chainradar.com/xmr/blocks]chainradar[/url][/li]
+[li][url=http://chainradar.com/btr/blocks]chainradar[/url][/li]
 [/list]
 
 [size=12pt][b]Exchanges, Services, and Related Projects[/b][/size]
@@ -128,13 +128,13 @@ For an up-to-date list of pools, go to [url=http://byterubpools.com]http://byter
 For a longer FAQ, check [url=https://bitcointalk.org/index.php?topic=721045]Community FAQ[/url]
 
 [b]What is CryptoNote?[/b]
-CryptoNote is the technology that allows creation of privacy-centric cryptocurrencies. You can visit their website here. The level of anonymity provided by CryptoNote isn't possible with Bitcoin code base by design. Bytecoin (BCN) was the CryptoNote reference implementation, and XMR is based on BCN's code.
+CryptoNote is the technology that allows creation of privacy-centric cryptocurrencies. You can visit their website here. The level of anonymity provided by CryptoNote isn't possible with Bitcoin code base by design. Bytecoin (BCN) was the CryptoNote reference implementation, and BTR is based on BCN's code.
 
 Two of the main features of CryptoNote are ring signatures that mask sender identities by mixing and one-time keys that make transactions unlinkable. Their combined effect gives a high degree of anonymity without any extra effort on the part of the user.
 
 Unlike Bitcoin, your funds are not held in the address you give out to others. Instead, every time you receive a payment it goes to an unlinkable address generated with random numbers. When you decide to spend the funds in that one-time address, the amount will be broken down and the components will be indistinguishable from identical outputs in the blockchain.
 
-For example if 556.44 XMR are sent, the protocol will break it down into 500 + 50 + 6 + 0.4 + 0.04 and a ring signature will be performed with other 500's, 50's, 6's, 0.4's, and 0.04's in the blockchain. Unlike the "CoinJoin" mixing method, CryptoNote mixes outputs not transactions. This means no other senders need to be participating with you at the same time or with the same amounts. Any arbitrary amount sent at any time can always be rendered fundamentally indistinguishable (a mathematical proof is given in the white paper).
+For example if 556.44 BTR are sent, the protocol will break it down into 500 + 50 + 6 + 0.4 + 0.04 and a ring signature will be performed with other 500's, 50's, 6's, 0.4's, and 0.04's in the blockchain. Unlike the "CoinJoin" mixing method, CryptoNote mixes outputs not transactions. This means no other senders need to be participating with you at the same time or with the same amounts. Any arbitrary amount sent at any time can always be rendered fundamentally indistinguishable (a mathematical proof is given in the white paper).
 
 The degree of anonymity is also a choice rather than decided by the protocol: do you want to be hidden as one among five or one among fifty? The size of the signature grows linearly as O(n+1) with the ambiguity so greater anonymity is paid for with higher fees to miners.
 
@@ -161,11 +161,11 @@ You can read about ZeroCoin and zero-knowledge proofs (ZKP) here. The ZK environ
 Other issues with ZKP include the RSA private key used to initiate the accumulator, which must be trusted to be destroyed by the generating party. It also obscures the entire economy, not just sender/receiver identities. If the ZK system is compromised, then an attacker can continuously spend coins that don't exist using false proofs. This damage is hidden from everybody due to total blinding and consequently at any given time it's not possible to know if the network has already been compromised. There is a tradeoff between these inherent risks and the maximal anonymity set provided by ZKP. CryptoNote aims for a different balance through the dual layers of privacy provided by one-time keys and ring signatures.
 
 [b]2. Comparison with CoinJoin-based approaches:[/b]
-XMR is more qualitatively similar to mixing implementations like CoinJoin. The differences arise in the departure from the Bitcoin protocol, which allows XMR to use new cryptography to provide decentralized and trustless mixing of superior quality. The critical problem with mixing services is the need to trust the operators. As an example, blockchain.info's mixer gives the following disclaimer: "However if the server was compromised or under subpoena it could be force to keep logs. If this were to happen although you haven't gained any privacy you haven't lost any either."
+BTR is more qualitatively similar to mixing implementations like CoinJoin. The differences arise in the departure from the Bitcoin protocol, which allows BTR to use new cryptography to provide decentralized and trustless mixing of superior quality. The critical problem with mixing services is the need to trust the operators. As an example, blockchain.info's mixer gives the following disclaimer: "However if the server was compromised or under subpoena it could be force to keep logs. If this were to happen although you haven't gained any privacy you haven't lost any either."
 
-The CoinJoin-inspired Darkcoin performs mixing with selected "masternodes" since it still uses ordinary signatures that can be mapped one-to-one. The motivation is that a randomly selected node is less likely than a single service to exhibit bad faith (such as keeping logs) . In practice, a few VPS companies host the vast majority of nodes and this approach relies on the integrity and good behavior of these nodes. XMR's more fundamental cryptographic approach doesn't have these vulnerabilities and the quality of anonymity is much higher.
+The CoinJoin-inspired Darkcoin performs mixing with selected "masternodes" since it still uses ordinary signatures that can be mapped one-to-one. The motivation is that a randomly selected node is less likely than a single service to exhibit bad faith (such as keeping logs) . In practice, a few VPS companies host the vast majority of nodes and this approach relies on the integrity and good behavior of these nodes. BTR's more fundamental cryptographic approach doesn't have these vulnerabilities and the quality of anonymity is much higher.
 
-XMR's ring signatures are also far more secure and convenient than CoinJoin because they mix outputs not transactions. This means a transaction doesn't involve waiting around for other senders to mix with. Nor is a user restricted to mixing only if others are sending the same amount. Arbitrary amounts can be sent at any time without anyone else's participation. This feature makes a timing analysis of the blockchain useless.
+BTR's ring signatures are also far more secure and convenient than CoinJoin because they mix outputs not transactions. This means a transaction doesn't involve waiting around for other senders to mix with. Nor is a user restricted to mixing only if others are sending the same amount. Arbitrary amounts can be sent at any time without anyone else's participation. This feature makes a timing analysis of the blockchain useless.
 
 [b]Overview of a transaction[/b]
 Bob decides to spend an output, which was sent to the one-time public key. He needs Extra [b](1)[/b], TxOutNumber [b](2)[/b], and his Account private key [b](3)[/b] to recover his one-time private key [b](4)[/b].

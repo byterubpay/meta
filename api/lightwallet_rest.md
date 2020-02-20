@@ -60,7 +60,7 @@ Information needed to spend an output.
 |       Field      |        Type       |          Description          |
 |------------------|-------------------|-------------------------------|
 | tx_id            | uint64            | Index of tx in blockchain     |
-| amount           | uint64-string     | XMR value of output           |
+| amount           | uint64-string     | BTR value of output           |
 | index            | uint16            | Index within vout vector      |
 | global_index     | uint64-string     | Index within amount           |
 | rct              | binary            | Bytes of ringct data          |
@@ -94,27 +94,27 @@ Information needed to spend an output.
 
 | Field |  Type   |      Description      |
 |-------|---------|-----------------------|
-| AUD * | float32 | AUD/XMR exchange rate |
-| BRL * | float32 | BRL/XMR exchange rate |
-| BTC * | float32 | BTC/XMR exchange rate |
-| CAD * | float32 | CAD/XMR exchange rate |
-| CHF * | float32 | CHF/XMR exchange rate |
-| CNY * | float32 | CNY/XMR exchange rate |
-| EUR * | float32 | EUR/XMR exchange rate |
-| GBP * | float32 | GBP/XMR exchange rate |
-| HKD * | float32 | HKD/XMR exchange rate |
-| INR * | float32 | INR/XMR exchange rate |
-| JPY * | float32 | JPY/XMR exchange rate |
-| KRW * | float32 | KRW/XMR exhcnage rate |
-| MXN * | float32 | MXN/XMR exchange rate |
-| NOK * | float32 | NOK/XMR exchange rate |
-| NZD * | float32 | NZD/XMR exchange rate |
-| SEK * | float32 | SEK/XMR exchange rate |
-| SGD * | float32 | SGD/XMR exchange rate |
-| TRY * | float32 | TRY/XMR exchange rate |
-| USD * | float32 | USD/XMR exchange rate |
-| RUB * | float32 | RUB/XMR exchange rate |
-| ZAR * | float32 | ZAR/XMR exchange rate |
+| AUD * | float32 | AUD/BTR exchange rate |
+| BRL * | float32 | BRL/BTR exchange rate |
+| BTC * | float32 | BTC/BTR exchange rate |
+| CAD * | float32 | CAD/BTR exchange rate |
+| CHF * | float32 | CHF/BTR exchange rate |
+| CNY * | float32 | CNY/BTR exchange rate |
+| EUR * | float32 | EUR/BTR exchange rate |
+| GBP * | float32 | GBP/BTR exchange rate |
+| HKD * | float32 | HKD/BTR exchange rate |
+| INR * | float32 | INR/BTR exchange rate |
+| JPY * | float32 | JPY/BTR exchange rate |
+| KRW * | float32 | KRW/BTR exhcnage rate |
+| MXN * | float32 | MXN/BTR exchange rate |
+| NOK * | float32 | NOK/BTR exchange rate |
+| NZD * | float32 | NZD/BTR exchange rate |
+| SEK * | float32 | SEK/BTR exchange rate |
+| SGD * | float32 | SGD/BTR exchange rate |
+| TRY * | float32 | TRY/BTR exchange rate |
+| USD * | float32 | USD/BTR exchange rate |
+| RUB * | float32 | RUB/BTR exchange rate |
+| ZAR * | float32 | ZAR/BTR exchange rate |
 
 > If an exchange rate is unavailable, the server field shall omit the field
 > from the JSON object.
@@ -123,7 +123,7 @@ Information needed to spend an output.
 
 |    Field   |      Type     |       Description          |
 |------------|---------------|----------------------------|
-| amount     | uint64-string | XMR possibly being spent   |
+| amount     | uint64-string | BTR possibly being spent   |
 | key_image  | binary        | Bytes of the key image     |
 | tx_pub_key | binary        | Bytes of the tx public key |
 | out_index  | uint16        | Index of source output     |
@@ -147,8 +147,8 @@ blockchain timestamps do not have sub-seconds.
 | id             | uint64           | Index of tx in blockchain |
 | hash           | binary           | Bytes of tx hash          |
 | timestamp *    | timestamp        | Timestamp of block        |
-| total_received | uint64-string    | Total XMR received        |
-| total_sent     | uint64-string    | XMR possibly being spent  |
+| total_received | uint64-string    | Total BTR received        |
+| total_sent     | uint64-string    | BTR possibly being spent  |
 | unlock_time    | uint64           | Tx unlock time field      |
 | height *       | uint64           | Block height              |
 | spent_outputs  | array of spend's | List of possible spends   |
@@ -169,7 +169,7 @@ blockchain timestamps do not have sub-seconds.
 > `payment_id` is omitted if the transaction had none. It is decrypted when the
 > encrypted form is used. The decryption may be incorrect - if the transaction
 > was TO another address, then this will be random bytes. This happens
-> frequently with outgoing payment ids; the received XMR in the transaction is
+> frequently with outgoing payment ids; the received BTR in the transaction is
 > change and the payment id is for the real recipient.
 
 > `mixin` does not include the real spend - this is the number of dummy inputs.
@@ -202,7 +202,7 @@ Randomly selected outputs for use in a ring signature.
 
 |   Field   |            Type          |       Description       |
 |-----------|--------------------------|-------------------------|
-|  amount   |       uint64-string      | XMR amount, 0 if ringct |
+|  amount   |       uint64-string      | BTR amount, 0 if ringct |
 | outputs * | array of random_output's | Selected outputs        |
 
 > `outputs` is omitted by the server if the `amount` does not have enough
@@ -228,9 +228,9 @@ list of candidate spends is returned.
 
 |        Field         |       Type       |       Description         |
 |----------------------|------------------|---------------------------|
-| locked_funds         | uint64-string    | Sum of unspendable XMR    |
-| total_received       | uint64-string    | Sum of received XMR       |
-| total_sent           | uint64-string    | Sum of possibly spent XMR |
+| locked_funds         | uint64-string    | Sum of unspendable BTR    |
+| total_received       | uint64-string    | Sum of received BTR       |
+| total_sent           | uint64-string    | Sum of possibly spent BTR |
 | scanned_height       | uint64           | Current tx scan progress  |
 | scanned_block_height | uint64           | Current scan progress     |
 | start_height         | uint64           | Start height of response  |
@@ -281,7 +281,7 @@ locally select outputs using a triangular distribution
 |    Field   |            Type           |          Description             |
 |------------|---------------------------|----------------------------------|
 | count      | uint32                    | Mixin (name is historical)       |
-| amounts    | array of uint64-strings's | XMR amounts that need mixing     |
+| amounts    | array of uint64-strings's | BTR amounts that need mixing     |
 
 > Clients must use amount `0` when computing a ringct output.
 
@@ -309,7 +309,7 @@ was actually spent.
 |------------------|----------------|----------------------------------|
 | address          | base58-address | Address to create/probe          |
 | view_key         | binary         | View key bytes                   |
-| amount           | uint64-string  | XMR send amount                  |
+| amount           | uint64-string  | BTR send amount                  |
 | mixin            | uint32         | Minimum mixin for source output  |
 | use_dust         | boolean        | Return all available outputs     |
 | dust_threshold * | uint64-string  | Ignore outputs below this amount |
@@ -348,7 +348,7 @@ Request an account scan from the genesis block.
 | status             | string         | Custom message                   |
 
 > `payment_id`, `import_fee`, and `payment_address` may be omitted if the
-> client does not need to send XMR to complete the request.
+> client does not need to send BTR to complete the request.
 
 #### `login`
 Check for the existence of an account or create a new one.
